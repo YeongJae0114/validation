@@ -44,7 +44,7 @@ public class ValidationItemControllerV2 {
         return "validation/v2/addForm";
     }
 
-    @PostMapping("/add")
+    //@PostMapping("/add")
     public String addItemV1(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
         //검증 오류 결과를 보관은 BindingResult bindingResult
 
@@ -80,7 +80,6 @@ public class ValidationItemControllerV2 {
         return "redirect:/validation/v2/items/{itemId}";
     }
 
-<<<<<<< HEAD
    // @PostMapping("/add")
     public String addItemV2(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
         //검증 오류 결과를 보관은 BindingResult bindingResult
@@ -153,9 +152,6 @@ public class ValidationItemControllerV2 {
     }
 
 
-
-=======
->>>>>>> parent of 148fdd3 (:art: Asd)
     @GetMapping("/{itemId}/edit")
     public String editForm(@PathVariable Long itemId, Model model) {
         Item item = itemRepository.findById(itemId);
